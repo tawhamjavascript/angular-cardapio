@@ -1,0 +1,93 @@
+<mat-toolbar class="espacamentobottom" color="primary">
+  <mat-toolbar-row>
+    <span> Cardápio </span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <mat-icon class = 'cursor' (click) = "goToPedido()" [matBadge]="produtosSelected.items.length" matBadgeColor="warn"> shopping_cart </mat-icon>
+    <span class="example-spacer"></span>
+    <span (click) = "goToPedido()" class="espacamento1 cursor"> Ver Pedido </span>
+    <span class="espacamento2"> R$ {{produtosSelected.pay | number: '1.2-2'}}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<h1> Sanduiches de Boi </h1>
+<mat-nav-list>
+  <mat-list-item *ngFor='let product of sanduichesBoi; let indice = index'>
+    <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+    <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+  </mat-list-item>
+</mat-nav-list>
+
+<h1> Sanduiches de Frango </h1>
+<mat-nav-list>
+  <mat-list-item *ngFor='let product of sanduichesFrango; let indice = index'>
+    <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+    <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+  </mat-list-item>
+</mat-nav-list>
+<mat-nav-list>
+<h1> Sanduiches Diversos </h1>
+  <mat-nav-list>
+    <mat-list-item *ngFor='let product of sanduichesDiversos; let indice = index'>
+      <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+      <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+    </mat-list-item>
+  </mat-nav-list>
+  <h1> Sanduiches Especiais </h1>
+  <mat-nav-list>
+    <mat-list-item *ngFor='let product of sanduichesEspeciais; let indice = index'>
+      <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+      <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+    </mat-list-item>
+  </mat-nav-list>
+  <h1> Pizzas </h1>
+  <mat-nav-list>
+    <mat-list-item *ngFor='let product of pizzas; let indice = index'>
+      <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+      <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+    </mat-list-item>
+  </mat-nav-list>
+  <h1> Lasanha </h1>
+  <mat-nav-list>
+    <mat-list-item *ngFor='let product of lasanha; let indice = index'>
+      <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+      <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+    </mat-list-item>
+  </mat-nav-list>
+  <h1> Pastelão </h1>
+  <mat-nav-list>
+    <mat-list-item *ngFor='let product of pastelao; let indice = index'>
+      <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+      <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+    </mat-list-item>
+  </mat-nav-list>
+  <h1> Porções </h1>
+  <mat-nav-list>
+    <mat-list-item *ngFor='let product of porcoes; let indice = index'>
+      <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+      <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+    </mat-list-item>
+  </mat-nav-list>
+  <h1> Creme de Açai </h1>
+  <mat-nav-list>
+    <mat-list-item *ngFor='let product of cremeAcai; let indice = index'>
+      <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+      <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+    </mat-list-item>
+  </mat-nav-list>
+ 
+  <h1> Sucos </h1>
+  <mat-nav-list>
+    <mat-list-item *ngFor='let product of sucos; let indice = index'>
+      <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+      <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+    </mat-list-item>
+  </mat-nav-list>
+  <h1> Bebidas Diversas </h1>
+  <mat-nav-list>
+    <mat-list-item *ngFor='let product of bebidasDiversas; let indice = index'>
+      <span matLine (click)="produtosSelected.add(product)" class='cursor'> {{product.descricao}} </span>
+      <span mat-icon-button> {{product.preco | number: '1.2-2'}} </span>
+    </mat-list-item>
+  </mat-nav-list>

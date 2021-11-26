@@ -1,0 +1,20 @@
+.cursor{
+    cursor: pointer
+}
+.espacamento1{
+    text-align: center;
+    margin-left: 40%;
+}
+
+.espacamento2{
+    margin-left: 32%;
+}
+h1 {
+    margin-left: 1%;
+    margin-bottom: -0.5%;
+    color: tomato;
+    
+}
+.espacamentobottom{
+    margin-bottom: 1%;
+}

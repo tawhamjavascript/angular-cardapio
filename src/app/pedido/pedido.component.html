@@ -1,0 +1,47 @@
+<p>
+  <mat-toolbar color = 'primary'>
+    <span> Pedido </span>
+  </mat-toolbar>
+</p>
+
+<div id='deletechild' *ngIf="produtos.length == 0; then thenBlock else elseBlock"> </div>
+<ng-template #thenBlock> 
+  <mat-nav-list>
+    <mat-list-item>
+  
+      <p id = "negrito" matLine > Seu pedido está vazio </p>
+
+    </mat-list-item>
+  </mat-nav-list>
+
+  
+   </ng-template>
+<ng-template #elseBlock>
+  <mat-nav-list>
+    <div *ngFor = 'let produto of produtos; let indice = index'> 
+      <ng-container *ngIf = 'produto != produtos[indice + 1]'> 
+        <mat-list-item>
+          <span matLine> {{produto.descricao}}
+          </span>
+          <span mat-icon-button> {{produtosSelected.countProducts(produto)}}x R$ {{produto.preco | number: '1.2-2'}} </span>
+        </mat-list-item>
+      </ng-container>
+    </div>
+  </mat-nav-list>
+
+</ng-template>
+<mat-nav-list>
+<mat-list-item>
+
+    <span id = "negrito" matLine > Total </span>
+    <span mat-icon-button> {{ pagamento | number: '1.2-2'}} </span>
+
+
+    
+  </mat-list-item>
+</mat-nav-list>
+
+<button class = 'espacamento' mat-raised-button (click) = 'goToCardapio()'> Incluir mais itens </button>
+<button class = 'espacamento' mat-raised-button (click) = "deleteProduct()"> Limpar </button>
+<button  class = 'espacamento' mat-raised-button color = "accent"> Concluir </button>
+
